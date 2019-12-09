@@ -2,14 +2,7 @@ module.exports = function (api) {
   api.cache(true);
 
   const presets = [
-    [
-      "@babel/preset-env",
-      {
-        "targets": {
-          "esmodules": true
-        }
-      }
-    ],
+    "@babel/preset-env",
     "@babel/react"
   ];
   const plugins = [
@@ -18,7 +11,7 @@ module.exports = function (api) {
     "@babel/plugin-transform-async-to-generator",
     "@babel/plugin-transform-runtime",
     ["module-resolver", {
-      "alias": { "rt": "./src/" }
+      alias: { "rt": "./src/" }
     }]
   ];
 
